@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //ovo je prazan niz koji će se popunjavati sa taskovima
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    tasks.array.forEach(task => renderTask(task)) //prolazimo kroz sve taskove i renderujemo ih na stranici
+    tasks.forEach(task => renderTask(task)) //prolazimo kroz sve taskove i renderujemo ih na stranici
 
     addTaskBtn.addEventListener("click", () => { //dodajemo event listener na dugme "add task" 
         const taskText = todoInput.value.trim() //hvata vrednost iz inputa i briše praznine sa početka i kraja stringa
